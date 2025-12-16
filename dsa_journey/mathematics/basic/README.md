@@ -165,3 +165,88 @@ Output: a = 3, b = 2
 - XOR is good for understanding bitwise logic
 
 ---
+
+## Problem Name - Nth Term of Arithmetic Progression
+STATEMENT - Find the nth term of an Arithmetic Progression (AP) given first two terms.
+
+### Example
+Input: a₁ = 2, a₂ = 3, n = 4  
+Output: 5  
+
+### Approach 1: Iterative Approach
+- Find common difference `d = a₂ - a₁`
+- Add `d` repeatedly till nth term
+
+**Time Complexity:** `O(n)`  
+**Space Complexity:** `O(1)`
+
+### Approach 2: Formula Based (Efficient)
+Formula:
+aₙ = a₁ + (n − 1) × d
+
+**Time Complexity:** `O(1)`  
+**Space Complexity:** `O(1)`
+
+### Key Notes
+- Loop approach is easy to understand
+- Formula is faster and interview-preferred
+
+### Conclusion
+- Always prefer formula-based approach for efficiency
+
+---
+
+## Problem Name - Dice Problem
+STATEMENT - Given a dice face value, find the number on the opposite face.
+
+### Example
+Input: 5 → Output: 2  
+Input: 6 → Output: 1  
+
+### Approach 1: Conditional Statements (Naive)
+- Use `if-else` for each dice face
+- Map each face manually
+
+**Time Complexity:** `O(1)`  
+**Space Complexity:** `O(1)`
+
+### Approach 2: Mathematical Observation (Efficient)
+- Opposite faces of a dice always sum to `7`
+- Answer = `7 - n`
+
+**Time Complexity:** `O(1)`  
+**Space Complexity:** `O(1)`
+
+### Key Notes
+- Dice pairs: (1,6), (2,5), (3,4)
+- Formula removes unnecessary conditions
+
+### Conclusion
+- Use `7 - n` for clean and optimized solution
+
+---
+
+## Problem Name - Closest Number
+STATEMENT - Find the number closest to `n` that is divisible by `m`.
+
+### Example
+Input: n = 13, m = 4 → Output: 12  
+Input: n = -15, m = 6 → Output: -18  
+
+### Approach: Quotient Based Method (Expected)
+- Find closest lower multiple
+- Find closest upper multiple
+- Compare distances from `n`
+
+**Time Complexity:** `O(1)`  
+**Space Complexity:** `O(1)`
+
+### Key Notes
+- Handle negative numbers carefully
+- If distances are equal, return the number with greater absolute value
+- Division by zero must be checked
+
+### Conclusion
+- Quotient-based approach is optimal and precise
+
+---
