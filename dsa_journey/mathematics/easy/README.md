@@ -106,3 +106,38 @@ Input: 1 → Not Prime
 - Optimized approach is preferred for large numbers
 
 ---
+
+## Problem Name - Power Checking
+STATEMENT - Check whether a given number `y` is a power of another number `x`.
+
+### Example
+Input: x = 10, y = 1000 → Output: true  
+Input: x = 10, y = 1001 → Output: false  
+Input: x = 1, y = 1 → Output: true  
+
+### Approach 1: Repeated Multiplication (Naive)
+- Start with `pow = 1`
+- Repeatedly multiply by `x`
+- Stop when `pow >= y`
+- Check if `pow == y`
+
+**Time Complexity:** `O(logₓ y)`  
+**Space Complexity:** `O(1)`
+
+### Approach 2: Iterative Division (Expected)
+- Repeatedly divide `y` by `x` while divisible
+- If final value becomes `1`, then `y` is power of `x`
+
+**Time Complexity:** `O(logₓ y)`  
+**Space Complexity:** `O(1)`
+
+### Key Notes
+- If `x == 1`, only `y == 1` is valid
+- Zero or negative values are invalid
+- Division approach avoids overflow issues
+
+### Conclusion
+- Iterative division is cleaner and safer
+- Prefer expected approach for optimized solutions
+
+---
