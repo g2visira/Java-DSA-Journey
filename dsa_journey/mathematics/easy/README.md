@@ -141,3 +141,62 @@ Input: x = 1, y = 1 → Output: true
 - Prefer expected approach for optimized solutions
 
 ---
+
+## Problem Name - Distance Between Two Points
+STATEMENT - Find the distance between two points in a 2D plane.
+
+### Example
+Input: (3, 4), (4, 3) → Output: √2 ≈ 1.414  
+
+### Approach 1: Pythagorean Theorem
+- Calculate horizontal and vertical distance
+- Apply distance formula  
+  √[(x₂ − x₁)² + (y₂ − y₁)²]
+
+**Time Complexity:** `O(1)`  
+**Space Complexity:** `O(1)`
+
+### Approach 2: Using `Math.hypot()`
+- Directly compute distance using built-in method
+- Internally applies the same formula safely
+
+**Time Complexity:** `O(1)`  
+**Space Complexity:** `O(1)`
+
+### Key Notes
+- `Math.hypot()` is cleaner and more readable
+- Handles overflow better internally
+- Both approaches are equally efficient
+
+### Conclusion
+- Use `Math.hypot()` for clean and professional code
+- Formula-based approach is good for understanding logic
+
+---
+
+## Problem Name - Valid Triangle
+STATEMENT - Check whether three given sides can form a valid triangle.
+
+### Example
+Input: 7, 10, 5 → Valid  
+Input: 1, 10, 12 → Invalid  
+
+### Approach: Triangle Inequality Theorem
+- Sum of any two sides must be greater than the third side  
+  a + b > c  
+  a + c > b  
+  b + c > a  
+
+**Time Complexity:** `O(1)`  
+**Space Complexity:** `O(1)`
+
+### Key Notes
+- If any condition fails, triangle is invalid
+- Works for all positive integer values
+- Simple logical check, no loops required
+
+### Conclusion
+- Triangle Inequality Theorem is sufficient and optimal
+- Best approach for validation problems
+
+---
