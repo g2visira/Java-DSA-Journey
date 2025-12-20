@@ -200,3 +200,63 @@ Input: 1, 10, 12 → Invalid
 - Best approach for validation problems
 
 ---
+
+## Problem Name - Overlapping Rectangles
+STATEMENT - Check whether two rectangles overlap or not on a 2D plane.
+
+### Example
+Input:  
+Rectangle 1 → (0, 10), (10, 0)  
+Rectangle 2 → (5, 5), (15, 0)  
+
+Output: Rectangle Overlapped
+
+### Approach: Coordinate Comparison
+- If one rectangle is completely to the left of the other → no overlap
+- If one rectangle is completely above the other → no overlap
+- Otherwise, rectangles overlap
+
+**Time Complexity:** `O(1)`  
+**Space Complexity:** `O(1)`
+
+### Key Notes
+- Uses top-left and bottom-right coordinates
+- Works for axis-aligned rectangles only
+- Simple logical conditions, no loops required
+
+### Conclusion
+- Coordinate comparison is efficient and sufficient
+- Best approach for rectangle overlap problems
+
+---
+
+## Problem Name - Factorial of a Number
+STATEMENT - Find the factorial of a given number.
+
+### Example
+Input: 5 → Output: 120  
+(5 × 4 × 3 × 2 × 1)
+
+### Approach 1: Iterative Method
+- Initialize result as `1`
+- Multiply numbers from `2` to `n`
+
+**Time Complexity:** `O(n)`  
+**Space Complexity:** `O(1)`
+
+### Approach 2: Recursion Method
+- Base case: `n == 0 or n == 1`
+- Recursive call with `n - 1`
+
+**Time Complexity:** `O(n)`  
+**Space Complexity:** `O(n)` (recursion stack)
+
+### Key Notes
+- Iterative approach is faster and memory efficient
+- Recursive approach is easier to understand conceptually
+
+### Conclusion
+- Prefer iterative method in real-world applications
+- Use recursion for learning and practice
+
+---
