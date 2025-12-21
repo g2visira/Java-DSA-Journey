@@ -260,3 +260,38 @@ Input: 5 → Output: 120
 - Use recursion for learning and practice
 
 ---
+
+## Problem Name - Pair Cube Count
+STATEMENT - Count the number of distinct pairs `(a, b)` such that  
+`a³ + b³ = n`.
+
+### Example
+Input: 9 → Output: 1  
+(1³ + 2³ = 9)
+
+### Approach 1: Nested Loop (Naive)
+- Iterate `a` from `1` to `n`
+- Iterate `b` from `1` to `n`
+- Check if `a³ + b³ == n`
+
+**Time Complexity:** `O(n²)`  
+**Space Complexity:** `O(1)`
+
+### Approach 2: Mathematical Optimization
+- Iterate `a` till `∛n`
+- Compute remaining value `b = n - a³`
+- Check if `b` is a perfect cube
+
+**Time Complexity:** `O(∛n)`  
+**Space Complexity:** `O(1)`
+
+### Key Notes
+- Optimized approach avoids unnecessary iterations
+- Uses cube root to limit search space
+- Much faster for large values of `n`
+
+### Conclusion
+- Nested loop is easy but inefficient
+- Optimized approach is preferred for performance
+
+---
