@@ -295,3 +295,56 @@ Input: 9 → Output: 1
 - Optimized approach is preferred for performance
 
 ---
+
+## Problem Name - GCD of Two Numbers
+STATEMENT - Find the Greatest Common Divisor (GCD) of two given numbers.
+
+### Example
+Input: 36, 60 → Output: 12  
+
+### Approach 1: Using Loop (Naive)
+- Start from minimum of both numbers
+- Check divisibility for both numbers
+- First common divisor from top is GCD
+
+**Time Complexity:** `O(min(a, b))`  
+**Space Complexity:** `O(1)`
+
+### Approach 2: Euclidean Algorithm (Subtraction)
+- Repeatedly subtract smaller number from larger
+- Continue until both numbers become equal
+
+**Time Complexity:** `O(max(a, b))`  
+**Space Complexity:** `O(1)`
+
+### Approach 3: Modified Euclidean Algorithm (Optimized Subtraction)
+- Check divisibility before subtraction
+- Reduces unnecessary recursive calls
+
+**Time Complexity:** `O(max(a, b))`  
+**Space Complexity:** `O(1)`
+
+### Approach 4: Euclidean Algorithm (Modulo - Optimized)
+- Replace subtraction with remainder operation
+- Recursively compute `gcd(b, a % b)`
+
+**Time Complexity:** `O(log(min(a, b)))`  
+**Space Complexity:** `O(log(min(a, b)))`
+
+### Approach 5: Built-in Method
+- Use `BigInteger.gcd()` for direct computation
+
+**Time Complexity:** `O(log(min(a, b)))`  
+**Space Complexity:** `O(1)`
+
+### Key Notes
+- Modulo-based Euclidean algorithm is the most efficient
+- Built-in method is reliable and clean
+- Naive approaches are useful for understanding basics
+
+### Conclusion
+- Prefer modulo-based Euclidean algorithm in practice
+- Use built-in method when readability matters
+
+---
+
