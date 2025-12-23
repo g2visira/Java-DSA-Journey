@@ -348,3 +348,36 @@ Input: 36, 60 → Output: 12
 
 ---
 
+## Problem Name - LCM of Two Numbers
+STATEMENT - Find the Least Common Multiple (LCM) of two given numbers.
+
+### Example
+Input: 5, 11 → Output: 55  
+
+### Approach 1: Conditional Loop Method
+- Start from the greater number
+- Check multiples until a common multiple is found
+
+**Time Complexity:** `O(a × b / max(a, b))`  
+**Space Complexity:** `O(1)`
+
+### Approach 2: Using GCD–LCM Formula (Expected)
+Formula:  
+LCM(a, b) = (a × b) / GCD(a, b)
+
+- First calculate GCD using Euclidean algorithm
+- Apply the formula to get LCM
+
+**Time Complexity:** `O(log(min(a, b)))`  
+**Space Complexity:** `O(1)`
+
+### Key Notes
+- Formula-based approach is faster and cleaner
+- Loop-based method is easy to understand but inefficient
+- Division before multiplication helps avoid overflow
+
+### Conclusion
+- Always prefer GCD-based formula for LCM
+- Use loop approach only for learning basics
+
+---
