@@ -381,3 +381,29 @@ LCM(a, b) = (a × b) / GCD(a, b)
 - Use loop approach only for learning basics
 
 ---
+
+## Problem Name - Add Two Fractions
+STATEMENT - Add two given fractions and return the result in its simplest form.
+
+### Example
+Input: 1/2 + 3/2 → Output: 2/1  
+
+### Approach: Using LCM and GCD
+- Find LCM of denominators using GCD
+- Convert both fractions to common denominator
+- Add numerators
+- Simplify the result using GCD
+
+**Time Complexity:** `O(log(min(a, b)))`  
+**Space Complexity:** `O(1)`
+
+### Key Notes
+- GCD is used for both LCM calculation and simplification
+- Result is always returned in reduced form
+- Works for all valid integer fractions
+
+### Conclusion
+- GCD-based approach is efficient and optimal
+- Best method for fraction addition problems
+
+---
