@@ -407,3 +407,37 @@ Input: 1/2 + 3/2 → Output: 2/1
 - Best method for fraction addition problems
 
 ---
+
+## Problem Name - Day of the Week
+STATEMENT - Find the day of the week for a given date.
+
+### Example
+Input: 15 / 6 / 1995 → Output: Day Index (0–6)
+
+### Approach 1: Formula-Based Method
+- Use predefined month codes
+- Adjust year for January and February
+- Compute year code using century and leap year rules
+- Final result obtained using modulo `7`
+
+**Time Complexity:** `O(1)`  
+**Space Complexity:** `O(1)`
+
+### Approach 2: Zeller’s Congruence (Optimized)
+- Apply Zeller’s Congruence formula
+- Adjust year when month is January or February
+- Directly compute day index using modulo arithmetic
+
+**Time Complexity:** `O(1)`  
+**Space Complexity:** `O(1)`
+
+### Key Notes
+- Both approaches return day index in range `0–6`
+- Zeller’s Congruence is widely used and reliable
+- No loops or extra memory required
+
+### Conclusion
+- Zeller’s Congruence is cleaner and more standard
+- Formula-based approach helps in understanding logic
+
+---
