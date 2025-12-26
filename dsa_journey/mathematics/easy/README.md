@@ -441,3 +441,70 @@ Input: 15 / 6 / 1995 → Output: Day Index (0–6)
 - Formula-based approach helps in understanding logic
 
 ---
+
+## Problem Name - Nth Fibonacci Number
+STATEMENT - Find the nth Fibonacci number, where each number is the sum of the previous two numbers.
+
+The Fibonacci sequence starts as:  
+0, 1, 1, 2, 3, 5, 8, 13, ...
+
+### Example
+Input: 9 → Output: 34  
+
+### Approach 1: Recursion
+In this approach, the problem is broken down into smaller subproblems.
+- If `n` is `0` or `1`, return `n`
+- Otherwise, recursively calculate `fib(n - 1)` and `fib(n - 2)`
+- Add both results to get the nth Fibonacci number
+
+**Time Complexity:** `O(2^n)`  
+**Space Complexity:** `O(n)` (due to recursion stack)
+
+**Explanation:**  
+This approach closely follows the mathematical definition of Fibonacci numbers, which makes it easy to understand. However, it recalculates the same values many times, making it inefficient for larger values of `n`.
+
+### Approach 2: Bottom-Up Dynamic Programming
+This approach avoids repeated calculations by storing previously computed values.
+- Create an array `dp` where `dp[i]` stores the ith Fibonacci number
+- Initialize base cases `dp[0] = 0` and `dp[1] = 1`
+- Build the solution iteratively up to `n`
+
+**Time Complexity:** `O(n)`  
+**Space Complexity:** `O(n)`
+
+**Explanation:**  
+By storing results, this method ensures that each Fibonacci number is computed only once. It is much faster than recursion and is a classic example of dynamic programming.
+
+### Approach 3: Space Optimized Iterative Approach
+This is an improvement over the DP approach.
+- Instead of storing all values, keep track of only the last two Fibonacci numbers
+- Update them iteratively until reaching the nth value
+
+**Time Complexity:** `O(n)`  
+**Space Complexity:** `O(1)`
+
+**Explanation:**  
+Since only the previous two values are required to compute the next one, extra memory can be avoided. This approach is both efficient and clean, making it suitable for real-world usage.
+
+### Approach 4: Golden Ratio Method
+This method uses the mathematical approximation based on the golden ratio (φ).
+- Uses a constant value of φ ≈ 1.618
+- Calculates Fibonacci numbers by repeated multiplication and rounding
+
+**Time Complexity:** `O(n)`  
+**Space Complexity:** `O(1)`
+
+**Explanation:**  
+This approach is interesting from a mathematical perspective, but due to floating-point rounding, it may produce incorrect results for larger values of `n`.
+
+### Key Notes
+- Recursive approach is intuitive but inefficient
+- Dynamic programming removes redundant calculations
+- Space-optimized approach gives the best balance of performance and memory
+- Golden ratio method should be used cautiously
+
+### Conclusion
+- For learning purposes, recursion helps in understanding the logic
+- For practical and interview scenarios, the space-optimized iterative approach is the best choice
+
+---
