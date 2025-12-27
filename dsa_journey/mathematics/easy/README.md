@@ -508,3 +508,67 @@ This approach is interesting from a mathematical perspective, but due to floatin
 - For practical and interview scenarios, the space-optimized iterative approach is the best choice
 
 ---
+
+## Problem Name - Decimal to Binary Conversion
+STATEMENT - Convert a given decimal number into its binary representation.
+
+Binary representation uses only `0` and `1`, where each digit represents a power of `2`.
+
+### Example
+Input: 12 → Output: 1100  
+
+### Approach 1: Division by 2 (Iterative)
+This is the most basic and commonly taught method.
+- Repeatedly divide the number by `2`
+- Store the remainder (`0` or `1`)
+- Reverse the obtained sequence to get the binary number
+
+**Time Complexity:** `O(log n)`  
+**Space Complexity:** `O(log n)`
+
+**Explanation:**  
+Each division by `2` gives the next least significant bit. Since bits are obtained in reverse order, the result must be reversed at the end.
+
+### Approach 2: Recursion
+This approach builds the binary representation from the most significant bit.
+- Recursively divide the number by `2`
+- Append the remainder after the recursive call returns
+
+**Time Complexity:** `O(log n)`  
+**Space Complexity:** `O(log n)` (recursion stack)
+
+**Explanation:**  
+Recursion naturally processes higher bits first, so the binary number is formed in the correct order without reversing.
+
+### Approach 3: Bitwise Operator
+This approach uses low-level bit manipulation.
+- Use `n & 1` to extract the last bit
+- Right shift the number using `n >> 1`
+- Reverse the collected bits
+
+**Time Complexity:** `O(log n)`  
+**Space Complexity:** `O(log n)`
+
+**Explanation:**  
+Bitwise operations are faster and closer to how numbers are represented internally, making this approach efficient and interview-friendly.
+
+### Approach 4: Built-in Function
+- Use Java’s built-in `Integer.toBinaryString()` method
+
+**Time Complexity:** `O(log n)`  
+**Space Complexity:** `O(1)`
+
+**Explanation:**  
+This is the cleanest approach for real-world applications, but it hides the actual logic, so it’s not recommended when learning fundamentals.
+
+### Key Notes
+- Binary digits are obtained from least significant bit to most significant bit
+- Bitwise approach is the closest to hardware-level computation
+- Built-in methods are good for production code
+
+### Conclusion
+- Use division or recursion to understand the concept
+- Use bitwise method for optimized logic
+- Use built-in function when readability matters most
+
+---
