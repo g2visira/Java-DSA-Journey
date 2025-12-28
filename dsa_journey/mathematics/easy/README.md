@@ -572,3 +572,48 @@ This is the cleanest approach for real-world applications, but it hides the actu
 - Use built-in function when readability matters most
 
 ---
+
+## Problem Name - Find Nth Term of the Series
+STATEMENT - Find the nth term of the series:  
+1, 3, 6, 10, 15, 21, ...
+
+This series is formed by adding natural numbers step by step and is also known as the **Triangular Number Series**.
+
+### Example
+Input: 1 → Output: 1  
+Input: 4 → Output: 10  
+Input: 6 → Output: 21  
+
+### Approach 1: Using Loop
+In this approach, we directly follow how the series is formed.
+- Start with a variable `ans = 0`
+- Add numbers from `1` to `n`
+- The final sum gives the nth term
+
+**Time Complexity:** `O(n)`  
+**Space Complexity:** `O(1)`
+
+**Explanation:**  
+This method is easy to understand because it mimics the actual formation of the series. However, for large values of `n`, it becomes slower due to repeated additions.
+
+### Approach 2: Using Mathematical Formula
+This approach uses a direct formula to calculate the result.
+- The nth term of the series is given by:  
+  **n × (n + 1) / 2**
+
+**Time Complexity:** `O(1)`  
+**Space Complexity:** `O(1)`
+
+**Explanation:**  
+This formula is derived from the sum of the first `n` natural numbers. It avoids loops and computes the result instantly, making it the most efficient approach.
+
+### Key Notes
+- This series represents triangular numbers
+- Loop-based approach is good for understanding logic
+- Formula-based approach is optimal and preferred
+
+### Conclusion
+- Use loop approach when learning the concept
+- Use formula approach for performance and interviews
+
+---
