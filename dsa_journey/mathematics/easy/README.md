@@ -617,3 +617,54 @@ This formula is derived from the sum of the first `n` natural numbers. It avoids
 - Use formula approach for performance and interviews
 
 ---
+
+## Problem Name - Armstrong Number
+STATEMENT - Check whether a given number is an Armstrong number or not.
+
+An Armstrong number is a number that is equal to the sum of its digits raised to the power of the number of digits.
+
+### Example
+Input: 153 → Output: true  
+
+Explanation:  
+1³ + 5³ + 3³ = 1 + 125 + 27 = 153  
+
+### Approach 1: Mathematical Digit Processing
+This approach follows the exact definition of an Armstrong number.
+- First, find the number of digits in the given number
+- Extract each digit one by one
+- Raise each digit to the power of total digits
+- Add all the powered digits and compare with the original number
+
+**Time Complexity:** `O(d × log d)`  
+**Space Complexity:** `O(1)`  
+(where `d` is the number of digits)
+
+**Explanation:**  
+This method stays close to the mathematical concept of Armstrong numbers. It avoids converting the number into another format and works purely with digits.
+
+### Approach 2: Using Numeric String
+This approach converts the number into a string.
+- Convert the number to string
+- Find the length of the string (number of digits)
+- Convert each character back to digit
+- Raise it to the required power and sum
+
+**Time Complexity:** `O(d)`  
+**Space Complexity:** `O(d)`
+
+**Explanation:**  
+This approach is easier to write and understand, especially for beginners. However, it uses extra memory due to string conversion.
+
+### Key Notes
+- Armstrong numbers depend on the number of digits
+- Mathematical approach avoids extra memory
+- String-based approach improves readability
+- Both approaches give the same result
+
+### Conclusion
+- Use mathematical digit processing for better efficiency
+- Use string-based approach for clarity and simplicity
+- Both methods are valid depending on the use case
+
+---
