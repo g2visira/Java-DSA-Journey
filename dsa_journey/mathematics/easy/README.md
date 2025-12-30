@@ -668,3 +668,47 @@ This approach is easier to write and understand, especially for beginners. Howev
 - Both methods are valid depending on the use case
 
 ---
+
+## Problem Name - Palindrome Number
+STATEMENT - Check whether a given number is a palindrome or not.
+
+A palindrome number is a number that reads the same forward and backward.
+
+### Example
+Input: 12321 → Output: true  
+Input: 123 → Output: false  
+
+### Approach 1: Reversing the Number
+In this approach, we reverse the given number and compare it with the original number.
+- Store the absolute value of the number to handle negatives
+- Reverse the number using digit extraction
+- Compare the reversed number with the original value
+
+**Time Complexity:** `O(d)`  
+**Space Complexity:** `O(1)`  
+(where `d` is the number of digits)
+
+**Explanation:**  
+This approach works directly with numbers and avoids any extra data structures. It is efficient and commonly preferred in interviews.
+
+### Approach 2: Using Number as a String
+This approach checks palindrome property by treating the number as a string.
+- Convert the number into a string
+- Compare characters from start and end moving towards the center
+
+**Time Complexity:** `O(d)`  
+**Space Complexity:** `O(d)`
+
+**Explanation:**  
+This method is easier to understand and implement. However, it uses extra memory due to string conversion.
+
+### Key Notes
+- Negative numbers are handled using absolute value
+- Reversing method is more memory efficient
+- String approach improves readability
+
+### Conclusion
+- Use number reversal approach for optimized performance
+- Use string-based approach for simplicity and clarity
+
+---
