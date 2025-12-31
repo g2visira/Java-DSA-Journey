@@ -712,3 +712,51 @@ This method is easier to understand and implement. However, it uses extra memory
 - Use string-based approach for simplicity and clarity
 
 ---
+
+## Problem Name - Digit Root
+STATEMENT - Find the digital root of a given number.
+
+The digital root is obtained by repeatedly adding the digits of a number until a single-digit number is produced.
+
+### Example
+Input: 1234 → Output: 1  
+
+Explanation:  
+1 + 2 + 3 + 4 = 10  
+1 + 0 = 1  
+
+### Approach 1: Repeated Digit Addition (Iterative)
+This approach directly follows the definition of digit root.
+- Keep adding digits of the number
+- If the sum becomes greater than `9`, repeat the process
+- Stop when a single-digit number is obtained
+
+**Time Complexity:** `O(d)`  
+**Space Complexity:** `O(1)`  
+(where `d` is the number of digits)
+
+**Explanation:**  
+This method simulates the real process step by step. It is easy to understand and clearly shows how the digit root is formed.
+
+### Approach 2: Mathematical Formula
+This approach uses a mathematical observation.
+- If `n == 0`, digit root is `0`
+- If `n` is divisible by `9`, digit root is `9`
+- Otherwise, digit root is `n % 9`
+
+**Time Complexity:** `O(1)`  
+**Space Complexity:** `O(1)`
+
+**Explanation:**  
+Digit root is closely related to modulo `9`. This approach avoids loops and gives the result instantly, making it the most efficient solution.
+
+### Key Notes
+- Digit root is always a single-digit number
+- Iterative approach is good for understanding logic
+- Formula-based approach is highly optimized
+
+### Conclusion
+- Use iterative method for learning and clarity
+- Use mathematical formula for performance-critical code
+
+---
